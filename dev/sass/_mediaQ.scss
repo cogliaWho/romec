@@ -1,0 +1,127 @@
+@media screen and (max-width: 1230px){
+	.sidebar .menu-container ul li a p{
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (max-width: 1024px){
+  	.sidebar .menu-container ul li a p{
+		font-size: 1.3rem;
+	}
+
+	header{
+		display: none;
+	}
+	
+	.sidebar{
+		position: absolute;
+		width: 270px;
+		top: 0px;
+		left: -270px;
+		transition: left .5s;
+		.lang-container{
+			height: 50px;
+			.flag{
+				height: 45%;
+			}
+		}
+	} 
+
+	.content{
+		position: relative;
+		width: 100%;
+		height: calc(100% - 50px);
+		left: 0%;
+		top: 0%;
+		transition: left .5s;
+	}
+
+	.mobile-header{
+		display: block;
+	}
+	
+	.form-sidebar p.info{
+		padding-left: 10px;
+	}
+
+}
+
+@media screen and (max-width: 959px){
+  
+}
+
+@media screen and (max-width: 768px){
+  .wrapper{overflow: auto;}
+}
+
+@media screen and (max-width: 767px){
+  
+}
+
+@media screen and (max-width: 650px){
+  
+}
+
+@media screen and (max-width: 574px){
+	.mobile-header .mobile-logo a{
+		background-size: 30%;
+	}
+
+    .slick-prev, .slick-next{
+  		background-size: 50%;
+	}
+
+	.form-sidebar{
+		width: 100%;
+		height: auto;
+	}
+
+	.form-contatti{
+		width: 100%;
+		height: auto;
+		div{
+			width:100%;
+			height: auto;
+		}
+	}
+
+	.content .contact-mobile{
+		height: auto;
+		overflow: hidden;
+	}
+
+	.info-wrap{
+		width: 100%;
+		height: auto;
+	}
+
+	.map-wrap{
+		width: 100%;
+	}
+
+	.form-sidebar p.info {
+    	padding-left: 0px;
+	}
+
+	.modal{
+		width: 90%;
+		left: 5%;
+		margin-left: 0px;
+		li {
+			font-size: 1rem;
+		    line-height: 1.5rem;
+		}
+	}
+
+	.content .container-half {
+	    background-size: contain;
+	    background-repeat: no-repeat;
+	    background-position: center;
+	}
+}
+
+@media screen and (max-width: 480px){
+  .mobile-header .mobile-logo a{
+  	background-size: 50%;
+  }
+}

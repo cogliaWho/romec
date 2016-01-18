@@ -1,0 +1,507 @@
+// CONSTANTS MAP
+$CONTENT_MAX_WIDTH: 1366px;
+
+$BG_COLOR: #e5e5e5;
+$WRAPPER_BG_COLOR: #FFFFFF;
+$MAIN_COLOR: #00558c;
+$HOVER_BG: #cecece;
+
+$BORDER_W: 2px;
+/* INCLUDE CSS SUB  TEMPLATE  */
+@import "reset";
+@import "mixins";
+@import "mobile";
+
+@font-face {
+    font-family: nexaLight;
+    src: url('../font/Nexa Light.otf');
+}
+
+@font-face {
+    font-family: nexaBold;
+    src: url('../font/Nexa Bold.otf');
+}
+
+@font-face {
+  	font-family: 'fontello';
+	src: url('../font/fontello.eot?37481707');
+	src: url('../font/fontello.eot?37481707#iefix') format('embedded-opentype'),
+	   url('../font/fontello.woff?37481707') format('woff'),
+	   url('../font/fontello.ttf?37481707') format('truetype'),
+	   url('../font/fontello.svg?37481707#fontello') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html{
+	font-size: 100%;
+}
+
+body{
+	font-family: 'nexaLight', sans-serif;
+	background-color: $BG_COLOR;
+	color: $MAIN_COLOR;
+}
+
+a{
+	color: $MAIN_COLOR;
+	text-decoration: none;
+	transition: all .3s;
+}
+
+a:hover, .selectedMenu{
+	color: #FFFFFF;
+	background-color: $HOVER_BG;
+}
+
+.txt-r{
+	text-align: right;
+}
+
+.wrapper{
+	width: 100%;
+	height: 100%;
+	max-width: 1920px;
+	max-height: 1080px;
+	background-color: $WRAPPER_BG_COLOR;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.sidebar{
+	float: left;
+	width: 25%;
+	height: 100%;
+	background-image: url(../images/menu-bg.png);
+	background-repeat: no-repeat;
+	background-position: left bottom; 
+	@include box-sizing(border-box);
+	border-right: $BORDER_W solid $MAIN_COLOR;
+
+	header, footer{
+		width: 100%;
+		height: 15%;
+		@include box-sizing(border-box);
+	}
+
+	header{
+		background-color: #FFFFFF;
+		border-bottom: $BORDER_W solid $MAIN_COLOR;
+		position: relative;
+		a.logo{
+			background-image: url(../images/logo.png);
+			background-repeat: no-repeat;
+			background-position: center center;
+    		background-size: 90%;
+			display:block;
+			height: 100%;
+			width: 100%;
+		}
+
+		a.logo:hover{
+			background-color: transparent;
+		}
+	}
+
+	footer{ 
+		height: 3%;
+		p{
+			text-align: center;
+			padding: 5px;
+			font-size: .7rem;
+		}
+	}
+
+	.lang-container{
+		width: 100%;
+		height: 5%;
+		overflow: hidden;
+		@include box-sizing(border-box);
+		@include flexbox();
+		@include flex-position(center, space-around);
+		background-color: #FFFFFF;
+		padding: 5px 0px;
+
+		.flag{
+			height: 100%;
+			padding: 5px;
+			text-align: center;
+			img{
+				height: 100%;
+/* 				opacity: .7; */
+			}
+/* 
+			img:hover{
+				opacity: 1;
+			} */
+		}
+	}
+
+	.menu-container{
+		width: 100%;
+		height: 77%;	
+		@include box-sizing(border-box);
+		@include flexbox();
+		@include flex-position(center, center);
+	
+		ul{
+			width: 100%;
+
+			li{
+				width: 100%;
+				height: 14.2%;
+				text-transform: uppercase;
+								
+				a{
+					display: block;
+					height: 100%;
+					width: 100%;
+					@include flexbox();
+  					@include flex-position(center, flex-start);
+	  				p{
+	  					padding-left: 50px;
+	  					font-size: 1.8rem;
+	  				}
+				}
+
+			}
+		}
+	}
+}
+
+.content{
+	float: left;
+	width: 75%;
+	height: 100%;
+	overflow: auto;
+
+	.container-half{
+		position: relative;
+		width: 100%;
+		height: 50%;
+		@include box-sizing(border-box);
+		padding: 30px;
+		
+		p{
+			padding: 10px;
+		}
+
+		.full-img{
+			max-width: 100%;
+			max-height: 100%;
+		}
+
+		.vert-half{
+			width: 50%;
+			float: left;
+			overflow: hidden;
+		}
+
+		.vert-half.img-list{
+    		box-sizing: border-box;
+			margin: 10px 0px;
+			padding: 10px;
+		}
+	}
+
+	.container-half.b-bottom{
+		border-bottom: $BORDER_W solid $MAIN_COLOR;
+	}
+
+	.container-half.no-pad{
+		padding: 0;
+	}
+
+	.clear-divs{
+		clear: both;
+	}
+}
+
+/* HOME PAGE */
+.hp-content{
+	width: 100%;
+	height: 100%;
+	background-color: $HOVER_BG;
+	@include flexbox();
+  	@include flex-position(center, center);
+
+  	img{
+  		width: 100%;
+  	}
+}
+/* END HOME PAGE */
+
+/* CONTACT */
+.map-wrap{
+	float: left;
+	width: 70%;
+	height: 100%;
+}
+
+.info-wrap{
+	float: left;
+	width: 30%;
+	height: 100%;
+	@include box-sizing(border-box);
+	padding-top: 30px;
+	padding-left: 30px;
+	p.info{
+		line-height: 2rem;
+		span{
+			font-size: 1.5rem;
+		}
+		a{
+			text-decoration: underline;
+		}
+	}
+}
+
+/* form */
+.form-contatti{
+	float: left;
+	width: 70%;
+	height: 100%;
+	
+	div{
+		float: left;
+		width: 50%;
+		height: 100%;
+	}
+
+	label{
+		display: block;
+		width:20%;
+		margin-top: 10px;
+		font-size: 1.5rem;
+		span{
+			color: red;
+		}
+	}
+
+	input{
+		height: 35px;
+		margin-top: 10px;
+		font-size: 1.3rem;
+		font-weight: 700;
+		font-family: nexaLight;
+		border: solid 1px #135058;
+	}
+
+	input[type="text"] {
+		width:100%;
+		padding: 10px;
+		border: none;
+		border-bottom: solid 2px #135058;
+		transition: border 0.3s;
+		outline: none;
+		border: solid 1px #135058;
+	}
+
+	textarea{
+		width: 100%;
+		height: 147px;
+		margin-top: 10px;
+		border: solid 1px #135058;
+		font-size: 1.3rem;
+		padding: 5px;
+		font-weight: 700;
+		font-family: nexaLight;
+	}
+
+	input[type="submit"] {
+		width: 100%;
+		cursor: pointer;
+		color: white;
+		background-color: $MAIN_COLOR;
+		border: none;
+	}
+}
+
+.form-sidebar{
+	float: left;
+	width: 30%;
+	height: 100%;
+
+	p.info{
+		padding: 40px 30px;
+		font-size: 1.5rem;
+	}
+}
+
+.modal-bg{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	background-color: #135058;
+	@include opacity(0.8); 
+}
+
+.modal{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -150px;
+	margin-left: -300px;
+	height: 300px;
+	width: 600px;
+	background-color: white;
+	z-index: 999;
+	color: black;
+	@include borderR(5px);
+	@include flexbox();
+  	@include flex-position(center, center);
+	
+	h2{
+		color: red;
+	}
+
+	li{
+		font-size: 1.5rem;
+		line-height: 2rem;
+	}
+
+  	.btn-close{
+  		position: absolute;
+		top: -5px;
+		right: -5px;
+		height: 30px;
+		width: 30px;
+		font-size: 1rem;
+		font-weight: 700;
+		cursor: pointer;
+		@include borderR(5px);
+		@include flexbox();
+  		@include flex-position(center, center);
+  		background-color: $MAIN_COLOR;
+  	}
+}
+
+/* END CONTACT */
+
+/* SLIDER */
+.slider-wrap{
+	height: 100%;
+	width: 100%;
+
+	.slide-single{
+		height: 100%;
+		width: 100%;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover; 
+		/* img{
+			height: 100%;
+			width: auto;
+		} */
+	}
+}
+
+.slick-list{
+	width:80%;
+	float: left;
+}
+
+.slick-arrow{
+		//position: absolute;
+		top: 0%;
+		z-index: 9999;
+		float: left;
+		font-size: 0;
+	    line-height: 0;
+	    display: block;
+	    width: 10%;
+	    height: 100%;
+	    padding: 0;
+	    cursor: pointer;
+	    color: transparent;
+	    border: none;
+	    outline: none;	    
+	    background-color: white;
+	}
+	
+	.slick-arrow:hover{
+		//@include opacity(.75);
+		//background-color: $MAIN_COLOR;
+	}
+
+	.slick-prev{
+		left: 0px;
+		background-image: url(../images/arrow-prev2.png);
+	    background-position: center center;
+	    background-repeat: no-repeat;
+	}
+
+	.slick-next{
+		right: 0px;
+		background-image: url(../images/arrow-next2.png);
+	    background-position: center center;
+	    background-repeat: no-repeat;
+	}
+
+	.slick-dots{
+		position: absolute;
+		bottom: 10px;
+		width: 100%;
+		@include flexbox();
+  		@include flex-position(center, center);
+  		li{
+  			margin: 0 10px;
+
+  			button{
+  				font-size: 0;
+			    line-height: 0;
+			    display: block;
+			    width: 20px;
+			    height: 20px;
+			    padding: 5px;
+			    cursor: pointer;
+			    color: transparent;
+			    border: 0;
+			    outline: none;
+			    @include opacity(.75);
+			    background-color: black;
+			    border-radius: 20px;
+  			}
+
+  		}
+  		li.slick-active button{
+			@include opacity(1);
+			background-color: $MAIN_COLOR;
+  		}
+	}
+/* SLIDER END */
+
+
+/* FONT ICONS */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  color: white;
+  display: inline-block;
+  text-decoration: inherit;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-th-large:before { content: '\e800'; } /* '' */
+.icon-menu:before { content: '\e801'; } /* '' */
+/* END FONT ICONS */
+@import "mediaQ";

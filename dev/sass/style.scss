@@ -13,16 +13,6 @@ $BORDER_W: 2px;
 @import "mobile";
 
 @font-face {
-    font-family: nexaLight;
-    src: url('../font/Nexa Light.otf');
-}
-
-@font-face {
-    font-family: nexaBold;
-    src: url('../font/Nexa Bold.otf');
-}
-
-@font-face {
   	font-family: 'fontello';
 	src: url('../font/fontello.eot?37481707');
 	src: url('../font/fontello.eot?37481707#iefix') format('embedded-opentype'),
@@ -38,7 +28,7 @@ html{
 }
 
 body{
-	font-family: 'nexaLight', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	background-color: $BG_COLOR;
 	color: $MAIN_COLOR;
 }
@@ -135,6 +125,10 @@ a:hover, .selectedMenu{
 				opacity: 1;
 			} */
 		}
+
+		.selected{
+			border-bottom: 1px solid $MAIN_COLOR;
+		}
 	}
 
 	.menu-container{
@@ -181,9 +175,13 @@ a:hover, .selectedMenu{
 		height: 50%;
 		@include box-sizing(border-box);
 		padding: 30px;
+		background-size: contain;
+	    background-repeat: no-repeat;
+	    background-position: left center;
 		
 		p{
 			padding: 10px;
+			line-height: 1.3rem;
 		}
 
 		.full-img{
@@ -199,13 +197,18 @@ a:hover, .selectedMenu{
 
 		.vert-half.img-list{
     		box-sizing: border-box;
-			margin: 10px 0px;
+			//margin: 10px 0px;
 			padding: 10px;
 		}
 	}
 
 	.container-half.b-bottom{
 		border-bottom: $BORDER_W solid $MAIN_COLOR;
+		background-color: #00558c;
+	}
+
+	.container-half.contact-mobile{
+		background-color: #FFFFFF;
 	}
 
 	.container-half.no-pad{
@@ -215,6 +218,18 @@ a:hover, .selectedMenu{
 	.clear-divs{
 		clear: both;
 	}
+}
+
+.chisiamo-header{
+	background-image:url('../images/slide_3.jpg');
+}
+
+.costruzione-header{
+	background-image:url('../images/slide_4.jpg');
+}
+
+.stampi-header{
+	background-image:url('../images/slide_5.jpg');
 }
 
 /* HOME PAGE */
@@ -283,7 +298,7 @@ a:hover, .selectedMenu{
 		margin-top: 10px;
 		font-size: 1.3rem;
 		font-weight: 700;
-		font-family: nexaLight;
+		font-family: 'Raleway', sans-serif;
 		border: solid 1px #135058;
 	}
 
@@ -305,7 +320,7 @@ a:hover, .selectedMenu{
 		font-size: 1.3rem;
 		padding: 5px;
 		font-weight: 700;
-		font-family: nexaLight;
+		font-family: 'Raleway', sans-serif;
 	}
 
 	input[type="submit"] {
@@ -325,6 +340,7 @@ a:hover, .selectedMenu{
 	p.info{
 		padding: 40px 30px;
 		font-size: 1.5rem;
+		line-height: 1.8rem;
 	}
 }
 
@@ -399,12 +415,12 @@ a:hover, .selectedMenu{
 }
 
 .slick-list{
-	width:80%;
+	width:100%;
 	float: left;
 }
 
 .slick-arrow{
-		//position: absolute;
+		position: absolute;
 		top: 0%;
 		z-index: 9999;
 		float: left;
@@ -418,7 +434,7 @@ a:hover, .selectedMenu{
 	    color: transparent;
 	    border: none;
 	    outline: none;	    
-	    background-color: white;
+	    background-color: transparent;
 	}
 	
 	.slick-arrow:hover{
@@ -428,14 +444,14 @@ a:hover, .selectedMenu{
 
 	.slick-prev{
 		left: 0px;
-		background-image: url(../images/arrow-prev2.png);
+		background-image: url(../images/frecciaSx.png);
 	    background-position: center center;
 	    background-repeat: no-repeat;
 	}
 
 	.slick-next{
 		right: 0px;
-		background-image: url(../images/arrow-next2.png);
+		background-image: url(../images/frecciaDx.png);
 	    background-position: center center;
 	    background-repeat: no-repeat;
 	}

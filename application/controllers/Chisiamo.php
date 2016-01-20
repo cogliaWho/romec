@@ -1,6 +1,13 @@
 <?php
 class Chisiamo extends CI_Controller {
 
+    public function __construct()
+    {
+        parent::__construct();
+        $site_lang = $this->session->userdata('site_lang');
+        $this->lang->load('Message', $site_lang);
+    }
+
     public function index()
 	{
         if ( ! file_exists(APPPATH.'/views/pages/chisiamo.php'))
@@ -9,14 +16,10 @@ class Chisiamo extends CI_Controller {
             show_404();
         }
 
-        $data['title'] = ucfirst('chi siamo'); // Capitalize the first letter
         $data['hasSlide'] = FALSE;
-        //$site_lang = $this->session->userdata('site_lang');
-        //$this->lang->load($data['title'], $site_lang);
-        //$data['language_msg'] = lang('msg_last_name');
-        
-        //$this->load->model('slideshows_model');
-        //$data['slides'] = $this->slideshows_model->get_slides('hp');
+        $data['lang_code'] = $this->session->userdata('site_lang');
+        $data['title'] = ucfirst(lang('msg_chisiamo_title')); // Capitalize the first letter
+        $data['text'] = lang('msg_chisiamo_text');
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);

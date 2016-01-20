@@ -8,10 +8,10 @@
 		?>
 		<script type="text/javascript">
 			var slickSettings = {
-				slidesToShow: 2, 
-				slidesToScroll: 2,
+				slidesToShow: 1, 
+				slidesToScroll: 1,
 				dots: true, 
-				autoplay: true,
+				autoplay: false,
 				autoplaySpeed: 4000,
 				responsive: [
 			    {
@@ -38,7 +38,7 @@
 		</script>
 		<?php
 	}
-	if($title == 'Contatti'){
+	if($title == 'Contatti' || $title == 'Contacts'){
 		echo '<script type="text/javascript" src="'.site_url('resources/js/map.js').'"></script>';
 		echo '<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>';
 	}

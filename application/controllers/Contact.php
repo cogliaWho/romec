@@ -4,6 +4,9 @@ class Contact extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
+        $site_lang = $this->session->userdata('site_lang');
+        $this->lang->load('Message', $site_lang);
+        
         $this->load->model('contact_model');
         $this->load->helper('form');
         $this->load->library('form_validation');
@@ -17,9 +20,11 @@ class Contact extends CI_Controller {
             show_404();
         }
 
-        $data['title'] = 'Contatti'; // Capitalize the first letter
         $data['error'] = '';
         $data['hasSlide'] = FALSE;
+        $data['lang_code'] = $this->session->userdata('site_lang');
+        $data['title'] = ucfirst(lang('msg_contatti_title')); // Capitalize the first letter
+        $data['text'] = lang('msg_contatti_text');
         
         $this->form_validation->set_rules('name', 'Nome', 'trim|required');
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');

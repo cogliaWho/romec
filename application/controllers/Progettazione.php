@@ -1,6 +1,13 @@
 <?php
 class Progettazione extends CI_Controller {
 
+    public function __construct()
+    {
+        parent::__construct();
+        $site_lang = $this->session->userdata('site_lang');
+        $this->lang->load('Message', $site_lang);
+    }
+
     public function index()
 	{
         if ( ! file_exists(APPPATH.'/views/pages/progettazione.php'))
@@ -9,11 +16,11 @@ class Progettazione extends CI_Controller {
             show_404();
         }
 
-        $data['title'] = ucfirst('Progettazione'); // Capitalize the first letter
+        $data['lang_code'] = $this->session->userdata('site_lang');
         $data['hasSlide'] = TRUE;
-        //$site_lang = $this->session->userdata('site_lang');
-        //$this->lang->load($data['title'], $site_lang);
-        //$data['language_msg'] = lang('msg_last_name');
+        $data['title'] = ucfirst(lang('msg_progettazione_title')); // Capitalize the first letter
+        $data['text'] = lang('msg_progettazione_text');
+
         
         $this->load->model('slideshows_model');
         $data['slides'] = $this->slideshows_model->get_slides('progettazione');

@@ -10,7 +10,7 @@
 			echo "<div id='modal-bg' class='modal-bg' onclick='closeModal()'></div><div id='modal' class='modal'><div class='btn-close' onclick='closeModal()'>X</div><ul><li><h2>Attenzione</h2></li>".validation_errors()."</ul></div>"; 
 		}?>
 		<div class="form-sidebar">
-			<p class="info">Compila il form qui a fianco per chiederci informazioni o collaborazioni.</p>
+			<?php echo $text; ?>
 			<!--<?php echo validation_errors(); ?>-->
 		</div>
 		<?php $attributes = array('class' => 'form-contatti', 'id' => 'form-contatti');?>

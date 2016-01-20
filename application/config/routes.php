@@ -62,6 +62,13 @@ $route['progettazione'] = 'progettazione';
 $route['costruzione'] = 'costruzione';
 $route['stampi'] = 'stampi';
 $route['contatti'] = 'contact';
+
+$route['about'] = 'chisiamo';
+$route['design'] = 'progettazione';
+$route['manufacture'] = 'costruzione';
+$route['imprint'] = 'stampi';
+$route['contacts'] = 'contact';
+
 $route['(:any)'] = 'home';
 
 $route['default_controller'] = 'home';

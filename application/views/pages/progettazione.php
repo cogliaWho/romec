@@ -3,7 +3,7 @@
 		<div class="menu-btn" onclick="openMenu()"><span class="icon-menu"></span></div>
 		<div class="mobile-logo"><a href="<?php echo site_url(''); ?>"></a></div>
 	</div>
-	<div class="container-half no-pad b-bottom">
+	<div class="container-half no-pad b-bottom progettazione-header">
 		<div id="slider-wrap" class="slider-wrap">
 		<?php
 			foreach($slides as $slide)
@@ -18,8 +18,6 @@
 		</div>
 	</div>
 	<div class="container-half">
-		<p>
-			progettazione
-		</p>
+		<?php echo $text; ?>
 	</div>
 </div>

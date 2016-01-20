@@ -26,14 +26,17 @@
 			}
 		}
 	} 
-
+ 
 	.content{
 		position: relative;
 		width: 100%;
-		height: calc(100% - 50px);
 		left: 0%;
 		top: 0%;
 		transition: left .5s;
+
+		.container-half{
+			height: calc(50% - 35px);
+		}
 	}
 
 	.mobile-header{
@@ -52,11 +55,36 @@
 
 @media screen and (max-width: 768px){
   .wrapper{overflow: auto;}
+
+  .content .container-half {
+	    
+	    .vert-half{
+	    	width: 100%;
+
+	    	p{
+	    		font-size: 1.3rem;
+	    		line-height: 1.4rem;
+	    		padding: 0px;
+	    	}
+	    }
+	}
+ 
+	.chisiamo-header{
+		background-image:url('../images/mobile/slide_3.jpg');
+	}
+
+	.costruzione-header{
+		background-image:url('../images/mobile/slide_4.jpg');
+	}
+
+	.stampi-header{
+		background-image:url('../images/mobile/slide_5.jpg');
+	}
 }
 
 @media screen and (max-width: 767px){
   
-}
+} 
 
 @media screen and (max-width: 650px){
   
@@ -111,12 +139,6 @@
 			font-size: 1rem;
 		    line-height: 1.5rem;
 		}
-	}
-
-	.content .container-half {
-	    background-size: contain;
-	    background-repeat: no-repeat;
-	    background-position: center;
 	}
 }
 

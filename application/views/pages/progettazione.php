@@ -6,10 +6,14 @@
 	<div class="container-half no-pad b-bottom progettazione-header">
 		<div id="slider-wrap" class="slider-wrap">
 		<?php
+			$mobilepath = "";
+			if($ismobile){
+				$mobilepath = "mobile/";
+			}
 			foreach($slides as $slide)
 			{
 			?>	
-			<div class="slide-single" style="background-image:url('resources/slideshows/<?=$slide['slideshow']?>/<?=$slide['image']?>')">
+			<div class="slide-single" style="background-image:url('resources/slideshows/<?=$slide['slideshow']?>/<?=$mobilepath.$slide['image']?>')">
 			    <!-- <img src="resources/slideshows/<?=$slide['slideshow']?>/<?=$slide['image']?>"/> -->
 			</div>
 			<?php

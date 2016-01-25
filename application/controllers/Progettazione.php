@@ -26,6 +26,13 @@ class Progettazione extends CI_Controller {
         $this->load->model('slideshows_model');
         $data['slides'] = $this->slideshows_model->get_slides('progettazione');
 
+        $this->load->library('MobileDetect');
+        $data['ismobile'] = "";
+        if ($this->mobiledetect->isMobile()) {
+            $data['ismobile'] = "true";
+        }
+
+
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('pages/progettazione', $data);

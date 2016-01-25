@@ -92,8 +92,7 @@ function initMap(){
         position: new google.maps.LatLng(coord.lat, coord.lon)
     });
 
-    var contentString = '<div style="text-align: center;"><img width="50%" src="resources/images/logo.png"/><p class="txt-c">dei fratelli Romele S.n.c.</p></div>';
-
+    var contentString = '<div style="text-align: center;"><img width="50%" src="resources/images/logo.png"/><p class="txt-c">ROMEC snc<br>di Romele e Giacomo e C.</p></div>';
     var infowindow = new google.maps.InfoWindow({
              content: contentString,
 		});

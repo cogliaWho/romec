@@ -522,7 +522,7 @@ a:hover, .selectedMenu{
   		}
   		li.slick-active button{
 			@include opacity(1);
-			background-color: $MAIN_COLOR;
+			background-color: #9d9d9d;
   		}
 	}
 /* SLIDER END */

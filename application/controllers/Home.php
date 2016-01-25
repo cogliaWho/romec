@@ -17,11 +17,12 @@ class Home extends CI_Controller {
         }
 
         $data['lang_code'] = $this->session->userdata('site_lang');
-        $data['hasSlide'] = FALSE;
         $data['title'] = ucfirst(lang('msg_home_title')); // Capitalize the first letter
         
-        //$this->load->model('slideshows_model');
-        //$data['slides'] = $this->slideshows_model->get_slides('hp');
+        $data['hasSlide'] = FALSE;
+        /*$data['autoplay'] = "true";
+        $this->load->model('slideshows_model');
+        $data['slides'] = $this->slideshows_model->get_slides('hp');*/
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);

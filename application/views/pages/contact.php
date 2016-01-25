@@ -15,6 +15,7 @@
 		</div>
 		<?php $attributes = array('class' => 'form-contatti', 'id' => 'form-contatti');?>
 		<?php echo form_open('contatti', $attributes); ?>
+			<h2 class="form-title">Come possiamo aiutarti?</h2>
 			<div>
 				<label for="name">Nome<span>*</span></label>
 			    <input type="input" name="name" value="" maxlength="128"/><br />
@@ -27,7 +28,7 @@
 			</div>
 			<div>
 			    <label for="message">Messaggio<span>*</span></label>
-			    <textarea name="message" placeholder="lascia un messaggio.." maxlength="500"></textarea><br />
+			    <textarea name="message" placeholder="lascia un messaggio..." maxlength="500"></textarea><br />
 			    <input type="submit" name="submit" value="Invia" />
 		    </div>
 		</form>
@@ -35,12 +36,14 @@
 	<div class="container-half no-pad contact-mobile">
 		<div class="info-wrap">
 			<p class="info">
-				<span>Romec S.n.c.</span><br>
-				Via G. Puccini 22, 25050<br>
-				Pian Camuno (BS)<br>
-				Tel <a href="tel:0364591429">0364/591429</a><br>
-				Fax. 0364/591429<br>
-				P.IVA 01944760980
+				<span>ROMEC snc</span><br>
+				<span>di Romele e Giacomo e C.</span><br>
+				Via G. Puccini 22<br>
+				25050 Pian Camuno - Brescia<br>
+				C.F. 01992370179<br>
+				P.IVA 01944760980<br>
+				Tel <a href="tel:0364591429">0364 591429</a> - <a href="tel:0364590858">0364 590858</a><br>
+				Fax. 0364 591429 - 0364 590858<br>
 			</p>
 		</div>
 		<div id="map-wrap" class="map-wrap">

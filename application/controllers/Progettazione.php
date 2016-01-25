@@ -17,11 +17,12 @@ class Progettazione extends CI_Controller {
         }
 
         $data['lang_code'] = $this->session->userdata('site_lang');
-        $data['hasSlide'] = TRUE;
         $data['title'] = ucfirst(lang('msg_progettazione_title')); // Capitalize the first letter
         $data['text'] = lang('msg_progettazione_text');
 
         
+        $data['hasSlide'] = TRUE;
+        $data['autoplay'] = "false";
         $this->load->model('slideshows_model');
         $data['slides'] = $this->slideshows_model->get_slides('progettazione');
 

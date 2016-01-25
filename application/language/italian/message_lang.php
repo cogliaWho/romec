@@ -16,4 +16,19 @@ $lang["msg_stampi_title"] = "stampi";
 $lang["msg_stampi_text"] = "<p>STAMPI: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>";
 // PAGINA CONTATTI
 $lang["msg_contatti_title"] = "contatti";
-$lang["msg_contatti_text"] = "<p class='info'>Compila il form qui a fianco per chiederci informazioni o collaborazioni.</p>";
+$lang["msg_contatti_text"] = "
+<h2>I nostri contatti</h2>
+<p class='info'>
+	<span>Direzione:</span></br>
+	<a href='mailto:g.romele@romecstampi.it'>g.romele@romecstampi.it</a>
+</p>
+<p class='info'>
+	<span>Amministrazione:</span></br>
+	<a href='mailto:amministrazione@romecstampi.it'>amministrazione@romecstampi.it</a>
+</p>
+<p class='info'>
+	<span>Ufficio Tecnico:</span></br>
+	<a href='mailto:l.castelanelli@romecstampi.it'>l.castelanelli@romecstampi.it</a></br>
+	<a href='mailto:s.zanoni@romecstampi.it'>s.zanoni@romecstampi.it</a></br>
+	<a href='mailto:r.mastroianni@romecstampi.it'>r.mastroianni@romecstampi.it</a>
+</p>";

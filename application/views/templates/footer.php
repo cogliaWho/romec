@@ -7,12 +7,14 @@
 		echo '<script type="text/javascript" src="'.site_url('resources/js/slick.min.js').'"></script>';
 		?>
 		<script type="text/javascript">
+			var autoplay = ("<?php echo $autoplay ?>" === "true") ? true : false;
+
 			var slickSettings = {
 				slidesToShow: 1, 
 				slidesToScroll: 1,
 				dots: true, 
-				autoplay: false,
-				autoplaySpeed: 4000,
+				autoplay: autoplay,
+				autoplaySpeed: 3000,
 				responsive: [
 			    {
 			      breakpoint: 1025,

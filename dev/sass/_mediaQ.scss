@@ -42,32 +42,29 @@
 	.mobile-header{
 		display: block;
 	}
-	
-	.form-sidebar p.info{
-		padding-left: 10px;
-	}
 
 }
 
 @media screen and (max-width: 959px){
-  
+   
 }
 
 @media screen and (max-width: 768px){
   .wrapper{overflow: auto;}
 
-  .content .container-half {
-	    
-	    .vert-half{
-	    	width: 100%;
-
-	    	p{
-	    		font-size: 1.3rem;
-	    		line-height: 1.4rem;
-	    		padding: 0px;
-	    	}
-	    }
-	}
+  	.content {
+  		.container-half {
+		    height: auto;
+		    .vert-half{
+		    	width: 100%;
+		    	p{
+		    		font-size: 1.3rem;
+		    		line-height: 1.4rem;
+		    		padding: 0px;
+		    	}
+		    }
+		}
+	} 
  
 	.chisiamo-header{
 		background-image:url('../images/mobile/slide_3.jpg');
@@ -80,10 +77,33 @@
 	.stampi-header{
 		background-image:url('../images/mobile/slide_5.jpg');
 	}
+
+	.form-sidebar{
+		width: 100%;
+		height: auto;
+	}
+
+	.form-contatti{
+		width: 100%;
+		height: auto;
+ 
+		div{
+			height: auto; 
+		}
+	}
+
+	.info-wrap, .map-wrap{
+		width: 50%;
+		height: 50%;
+	}
+
+	.content .container-half.contact-mobile{
+		overflow: hidden; 
+	}
 }
 
 @media screen and (max-width: 767px){
-  
+    
 } 
 
 @media screen and (max-width: 650px){
@@ -125,6 +145,7 @@
 
 	.map-wrap{
 		width: 100%;
+		height: 100%;
 	}
 
 	.form-sidebar p.info {

@@ -79,7 +79,7 @@ a:hover, .selectedMenu{
 		border-bottom: $BORDER_W solid $MAIN_COLOR;
 		position: relative;
 		a.logo{
-			background-image: url(../images/logo.png);
+			background-image: url(../images/logo_romec.svg);
 			background-repeat: no-repeat;
 			background-position: center center;
     		background-size: 90%;
@@ -184,9 +184,17 @@ a:hover, .selectedMenu{
 			line-height: 1.3rem;
 		}
 
+		h2{
+			font-size: 1.5rem;
+			padding: 10px;
+			padding-bottom: 5px; 
+			border-bottom: $BORDER_W solid $MAIN_COLOR;
+		}
+
 		.full-img{
 			max-width: 100%;
 			max-height: 100%;
+			border: 2px solid #00558c;
 		}
 
 		.vert-half{
@@ -195,7 +203,13 @@ a:hover, .selectedMenu{
 			overflow: hidden;
 		}
 
-		.vert-half.img-list{
+		.vert-third{
+			width: 33.333333%;
+			float: left;
+			overflow: hidden;
+		}
+
+		.vert-half.img-list, .vert-third.img-list{
     		box-sizing: border-box;
 			//margin: 10px 0px;
 			padding: 10px;
@@ -235,8 +249,8 @@ a:hover, .selectedMenu{
 /* HOME PAGE */
 .hp-content{
 	width: 100%;
-	height: 100%;
-	background-color: $HOVER_BG;
+	
+	background-color: $MAIN_COLOR;
 	@include flexbox();
   	@include flex-position(center, center);
 
@@ -249,24 +263,27 @@ a:hover, .selectedMenu{
 /* CONTACT */
 .map-wrap{
 	float: left;
-	width: 70%;
+	width: 65%;
 	height: 100%;
 }
 
 .info-wrap{
 	float: left;
-	width: 30%;
+	width: 35%;
 	height: 100%;
 	@include box-sizing(border-box);
-	padding-top: 30px;
-	padding-left: 30px;
+	padding-top: 20px;
+	padding-left: 20px;
 	p.info{
 		line-height: 2rem;
 		span{
 			font-size: 1.5rem;
 		}
 		a{
-			text-decoration: underline;
+			color: white;
+			background-color: #00558c;
+			border-radius: 5px;
+			padding: 2px 4px;
 		}
 	}
 }
@@ -274,28 +291,36 @@ a:hover, .selectedMenu{
 /* form */
 .form-contatti{
 	float: left;
-	width: 70%;
+	width: 65%;
 	height: 100%;
 	
+	h2.form-title{
+		font-size: 1.5rem;
+		padding: 0px;
+		padding-bottom: 5px; 
+		border-bottom: $BORDER_W solid $MAIN_COLOR;
+	}
+
 	div{
 		float: left;
 		width: 50%;
 		height: 100%;
+
 	}
 
 	label{
 		display: block;
 		width:20%;
 		margin-top: 10px;
-		font-size: 1.5rem;
+		font-size: 1.4rem;
 		span{
 			color: red;
 		}
 	}
 
 	input{
-		height: 35px;
-		margin-top: 10px;
+		height: 30px;
+		margin: 10px 0px;
 		font-size: 1.3rem;
 		font-weight: 700;
 		font-family: 'Raleway', sans-serif;
@@ -319,7 +344,6 @@ a:hover, .selectedMenu{
 		border: solid 1px #135058;
 		font-size: 1.3rem;
 		padding: 5px;
-		font-weight: 700;
 		font-family: 'Raleway', sans-serif;
 	}
 
@@ -329,18 +353,31 @@ a:hover, .selectedMenu{
 		color: white;
 		background-color: $MAIN_COLOR;
 		border: none;
+		margin-top: 15px;
 	}
 }
 
 .form-sidebar{
 	float: left;
-	width: 30%;
+	width: 35%;
 	height: 100%;
 
-	p.info{
-		padding: 40px 30px;
+	h2{
 		font-size: 1.5rem;
-		line-height: 1.8rem;
+		padding-bottom: 5px;
+		border-bottom: $BORDER_W solid $MAIN_COLOR;
+		width: 95%;
+	}
+
+	p.info{
+		padding: 10px 0px;
+		font-size: 1.1rem;
+
+		span{
+			font-size: 1.2rem;
+			line-height: 1.7rem;
+			font-weight: bold;
+		}
 	}
 }
 
@@ -435,6 +472,7 @@ a:hover, .selectedMenu{
 	    border: none;
 	    outline: none;	    
 	    background-color: transparent;
+	    background-size: 30%;
 	}
 	
 	.slick-arrow:hover{

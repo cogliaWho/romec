@@ -5,7 +5,7 @@
 	</header>
 	<!-- Language selection -->
 	<div class="lang-container">
-		<div class="flag ita <?php if($lang_code == 'italian'){ echo 'selected'; } ?>">
+		<div class="flag ita <?php if($lang_code != 'english'){ echo 'selected'; } ?>">
 			<a href="<?php echo site_url('langSwitch/switchLanguage/italian'); ?>"><img src="resources/images/ita.jpg"></a>
 		</div>
 		<div class="flag eng <?php if($lang_code == 'english'){ echo 'selected'; } ?>">
@@ -15,7 +15,7 @@
 	<!-- Menu -->
 	<div class="menu-container">
 		<ul>
-			<?php if($lang_code == 'italian'){ ?>
+			<?php if($lang_code != 'english'){ ?>
 			<li><a href="<?php echo site_url('chisiamo'); ?>" class="<?php if($title == 'Chi siamo'){ echo 'selectedMenu'; } ?>"><p>Chi siamo</p></a></li>
 			<li><a href="<?php echo site_url('progettazione'); ?>" class="<?php if($title == 'Progettazione'){ echo 'selectedMenu'; } ?>"><p>Progettazione</p></a></li>
 			<li><a href="<?php echo site_url('costruzione'); ?>" class="<?php if($title == 'Costruzione'){ echo 'selectedMenu'; } ?>"><p>Costruzione</p></a></li>

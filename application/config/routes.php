@@ -69,6 +69,8 @@ $route['manufacture'] = 'costruzione';
 $route['imprint'] = 'stampi';
 $route['contacts'] = 'contact';
 
+$route['cookie'] = 'cookie';
+
 $route['(:any)'] = 'home';
 
 $route['default_controller'] = 'home';

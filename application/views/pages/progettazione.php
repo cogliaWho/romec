@@ -12,7 +12,7 @@
 			}
 			foreach($slides as $slide)
 			{
-			?>	
+			?>
 			<div class="slide-single" style="background-image:url('resources/slideshows/<?=$slide['slideshow']?>/<?=$mobilepath.$slide['image']?>')">
 			    <!-- <img src="resources/slideshows/<?=$slide['slideshow']?>/<?=$slide['image']?>"/> -->
 			</div>
@@ -24,4 +24,11 @@
 	<div class="container-half">
 		<?php echo $text; ?>
 	</div>
+	<div class="clear-divs"></div>
+	<div class="footer">
+    <p>
+      ROMEC snc di Romele e Giacomo e C. | Via G. Puccini,  22 - 25050 Pian Camuno (BS)<br>
+      Tel. 0364 591429 - 0364 590858 - Fax. 0364 591429 - 0364 590858 C.F. 01992370179 - P.IVA 01944760980
+    </p>
+  </div>
 </div>

@@ -1,7 +1,136 @@
-@media screen and (max-width: 1230px){
-	.sidebar .menu-container ul li a p{
-		font-size: 1.5rem;
+@media screen and (max-width: 1366px){
+.container-half{
+	p{
+		font-size: 1rem;
+		line-height: 1.3rem;
 	}
+}
+	/* CONTACT */
+.map-wrap{
+	float: left;
+	width: 65%;
+	height: 100%;
+}
+
+.info-wrap{
+	float: left;
+	width: 35%;
+	height: 100%;
+	@include box-sizing(border-box);
+	padding-top: 20px;
+	padding-left: 20px;
+	p.info{
+		line-height: 2rem;
+		padding-left: 0px;
+		span{
+			font-size: 1.5rem;
+		}
+		a{
+			color: white;
+			background-color: #00558c;
+			border-radius: 5px;
+			padding: 2px 4px;
+		}
+	}
+}
+
+/* form */
+.form-contatti{
+	float: left;
+	width: 65%;
+	height: 100%;
+
+	h2.form-title{
+		font-size: 1.5rem;
+		padding: 0px;
+		padding-bottom: 5px;
+		border-bottom: $BORDER_W solid $MAIN_COLOR;
+	}
+
+	div{
+		float: left;
+		width: 50%;
+		height: 100%;
+
+	}
+
+	label{
+		display: block;
+		width:20%;
+		margin-top: 10px;
+		font-size: 1.4rem;
+		span{
+			color: red;
+		}
+	}
+
+	input{
+		height: 30px;
+		margin: 10px 0px;
+		font-size: 1.3rem;
+		font-weight: 700;
+		font-family: 'Raleway', sans-serif;
+		border: solid 1px #135058;
+	}
+
+	input[type="text"] {
+		width:100%;
+		padding: 10px;
+		border: none;
+		border-bottom: solid 2px #135058;
+		transition: border 0.3s;
+		outline: none;
+		border: solid 1px #135058;
+	}
+
+	textarea{
+		width: 100%;
+		height: 147px;
+		margin-top: 10px;
+		border: solid 1px #135058;
+		font-size: 1.3rem;
+		padding: 5px;
+		font-family: 'Raleway', sans-serif;
+	}
+
+	input[type="submit"] {
+		width: 100%;
+		cursor: pointer;
+		color: white;
+		background-color: $MAIN_COLOR;
+		border: none;
+		margin-top: 15px;
+	}
+}
+
+.form-sidebar{
+	float: left;
+	width: 35%;
+	height: 100%;
+
+	h2{
+		font-size: 1.5rem;
+		padding-bottom: 5px;
+		border-bottom: $BORDER_W solid $MAIN_COLOR;
+		width: 95%;
+	}
+
+	p.info{
+		padding: 10px 0px;
+		font-size: .9rem;
+		line-height: 1.2rem;
+		span{
+			font-size: 1rem;
+			font-weight: bold;
+		}
+		a{
+			//color: white;
+			//background-color: #00558c;
+			border-radius: 5px;
+			padding: 2px 0px;
+		}
+	}
+}
 }
 
 @media screen and (max-width: 1024px){
@@ -12,7 +141,7 @@
 	header{
 		display: none;
 	}
-	
+
 	.sidebar{
 		position: absolute;
 		width: 270px;
@@ -25,8 +154,8 @@
 				height: 45%;
 			}
 		}
-	} 
- 
+	}
+
 	.content{
 		position: relative;
 		width: 100%;
@@ -46,7 +175,7 @@
 }
 
 @media screen and (max-width: 959px){
-   
+
 }
 
 @media screen and (max-width: 768px){
@@ -54,9 +183,9 @@
 
   	.content {
   		.container-half {
-  			min-height: 100px;
+  			min-height: 500px;
 		    height: auto;
-		    background-size: cover;
+		    background-size: contain;
 		    .vert-half{
 		    	width: 100%;
 		    	p{
@@ -66,10 +195,10 @@
 		    	}
 		    }
 		}
-	} 
- 
+	}
+
 	.chisiamo-header{
-		background-image:url('../images/mobile/slide_3.jpg');	
+		background-image:url('../images/mobile/slide_3.jpg');
 	}
 
 	.costruzione-header{
@@ -83,14 +212,26 @@
 	.form-sidebar{
 		width: 100%;
 		height: auto;
+		font-size: 1.3rem;
+		line-height: 1.5rem;
+		p.info{
+			  font-size: 1.2rem;
+    		line-height: 1.5rem;
+			span{
+				font-size: 1.4rem;
+				font-weight: bold;
+			}
+		}
 	}
 
 	.form-contatti{
 		width: 100%;
 		height: auto;
- 
+		h2.form-title{
+			margin-top: 15px;
+		}
 		div{
-			height: auto; 
+			height: auto;
 		}
 	}
 
@@ -99,10 +240,15 @@
 		height: 50%;
 	}
 
-	.content .container-half.contact-mobile{
-		overflow: hidden; 
+	.info-wrap{
+		padding: 0px;
 	}
- 
+
+	.content .container-half.contact-mobile{
+		overflow: hidden;
+		padding: 30px;
+	}
+
 	.slider-wrap{
 		height:500px;
 
@@ -113,16 +259,23 @@
 }
 
 @media screen and (max-width: 767px){
-    
-} 
+
+}
 
 @media screen and (max-width: 650px){
-  
+
 }
 
 @media screen and (max-width: 574px){
 	.slider-wrap{
 		height:230px;
+	}
+
+	.content {
+  		.container-half {
+  			min-height: 230px;
+  			padding: 15px;
+  		}
 	}
 
 	.mobile-header .mobile-logo a{
@@ -136,6 +289,13 @@
 	.form-sidebar{
 		width: 100%;
 		height: auto;
+		p.info{
+			  font-size: 1.1rem;
+    		line-height: 1.4rem;
+			span{
+				font-size: 1.3rem;
+			}
+		}
 	}
 
 	.form-contatti{
@@ -145,6 +305,10 @@
 			width:100%;
 			height: auto;
 		}
+	}
+
+	.content .container-half.contact-mobile{
+		padding: 15px;
 	}
 
 	.content .contact-mobile{

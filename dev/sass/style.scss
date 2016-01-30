@@ -62,9 +62,10 @@ a:hover, .selectedMenu{
 	float: left;
 	width: 25%;
 	height: 100%;
-	background-image: url(../images/menu-bg.png);
+	background-image: url(../images/menu-bg.jpg);
 	background-repeat: no-repeat;
-	background-position: left bottom; 
+	background-position: left bottom;
+	background-size: contain;
 	@include box-sizing(border-box);
 	border-right: $BORDER_W solid $MAIN_COLOR;
 
@@ -93,7 +94,7 @@ a:hover, .selectedMenu{
 		}
 	}
 
-	footer{ 
+	footer{
 		height: 3%;
 		p{
 			text-align: center;
@@ -109,7 +110,7 @@ a:hover, .selectedMenu{
 		@include box-sizing(border-box);
 		@include flexbox();
 		@include flex-position(center, space-around);
-		background-color: #FFFFFF;
+		background-color: #fdfdfd;
 		padding: 5px 0px;
 
 		.flag{
@@ -120,32 +121,32 @@ a:hover, .selectedMenu{
 				height: 100%;
 /* 				opacity: .7; */
 			}
-/* 
+/*
 			img:hover{
 				opacity: 1;
 			} */
 		}
 
 		.selected{
-			border-bottom: 1px solid $MAIN_COLOR;
+			border-bottom: 2px solid $MAIN_COLOR;
 		}
 	}
 
 	.menu-container{
 		width: 100%;
-		height: 77%;	
+		height: 77%;
 		@include box-sizing(border-box);
 		@include flexbox();
 		@include flex-position(center, center);
-	
+
 		ul{
 			width: 100%;
 
 			li{
 				width: 100%;
-				height: 14.2%;
+				height: 13%;
 				text-transform: uppercase;
-								
+
 				a{
 					display: block;
 					height: 100%;
@@ -154,7 +155,7 @@ a:hover, .selectedMenu{
   					@include flex-position(center, flex-start);
 	  				p{
 	  					padding-left: 50px;
-	  					font-size: 1.8rem;
+	  					font-size: 1.5rem;
 	  				}
 				}
 
@@ -169,6 +170,22 @@ a:hover, .selectedMenu{
 	height: 100%;
 	overflow: auto;
 
+	p{
+		padding: 10px;
+		line-height: 1.3rem;
+
+		span{
+			font-weight: bold;
+		}
+	}
+
+	h2{
+		font-size: 1.5rem;
+		padding: 10px;
+		padding-bottom: 5px;
+		border-bottom: $BORDER_W solid $MAIN_COLOR;
+	}
+
 	.container-half{
 		position: relative;
 		width: 100%;
@@ -176,18 +193,23 @@ a:hover, .selectedMenu{
 		@include box-sizing(border-box);
 		padding: 30px;
 		background-size: contain;
-	    background-repeat: no-repeat;
-	    background-position: left center;
-		
+	  background-repeat: no-repeat;
+	  background-position: left center;
+
 		p{
 			padding: 10px;
-			line-height: 1.3rem;
+			font-size: 1.2rem;
+			line-height: 1.5rem;
+
+			span{
+				font-weight: bold;
+			}
 		}
 
 		h2{
 			font-size: 1.5rem;
 			padding: 10px;
-			padding-bottom: 5px; 
+			padding-bottom: 5px;
 			border-bottom: $BORDER_W solid $MAIN_COLOR;
 		}
 
@@ -216,6 +238,8 @@ a:hover, .selectedMenu{
 		}
 	}
 
+
+
 	.container-half.b-bottom{
 		border-bottom: $BORDER_W solid $MAIN_COLOR;
 		background-color: #00558c;
@@ -223,6 +247,11 @@ a:hover, .selectedMenu{
 
 	.container-half.contact-mobile{
 		background-color: #FFFFFF;
+		padding: 20px;
+		h2{
+			padding: 0px;
+			padding-bottom: 5px;
+		}
 	}
 
 	.container-half.no-pad{
@@ -231,6 +260,22 @@ a:hover, .selectedMenu{
 
 	.clear-divs{
 		clear: both;
+	}
+
+	.footer{
+		width: 100%;
+		height: 40px;
+		background-color: $MAIN_COLOR;
+		@include box-sizing(border-box);
+		@include flexbox();
+		@include flex-position(center, center);
+		p{
+			padding: 0px;
+			text-align: center;
+			font-size: .8rem;
+			line-height: 1.1rem;
+			color: #FFFFFF;
+		}
 	}
 }
 
@@ -249,7 +294,6 @@ a:hover, .selectedMenu{
 /* HOME PAGE */
 .hp-content{
 	width: 100%;
-	
 	background-color: $MAIN_COLOR;
 	@include flexbox();
   	@include flex-position(center, center);
@@ -276,6 +320,8 @@ a:hover, .selectedMenu{
 	padding-left: 20px;
 	p.info{
 		line-height: 2rem;
+		padding-left: 0px;
+		font-size: 1.3rem;
 		span{
 			font-size: 1.5rem;
 		}
@@ -293,11 +339,11 @@ a:hover, .selectedMenu{
 	float: left;
 	width: 65%;
 	height: 100%;
-	
+
 	h2.form-title{
 		font-size: 1.5rem;
 		padding: 0px;
-		padding-bottom: 5px; 
+		padding-bottom: 5px;
 		border-bottom: $BORDER_W solid $MAIN_COLOR;
 	}
 
@@ -371,12 +417,17 @@ a:hover, .selectedMenu{
 
 	p.info{
 		padding: 10px 0px;
-		font-size: 1.1rem;
-
+		font-size: 1.3rem;
+		line-height: 1.6rem;
 		span{
-			font-size: 1.2rem;
-			line-height: 1.7rem;
+			font-size: 1.3rem;
 			font-weight: bold;
+		}
+		a{
+			//color: white;
+			//background-color: #00558c;
+			border-radius: 5px;
+			padding: 2px 0px;
 		}
 	}
 }
@@ -388,7 +439,7 @@ a:hover, .selectedMenu{
 	height: 100%;
 	width: 100%;
 	background-color: #135058;
-	@include opacity(0.8); 
+	@include opacity(0.8);
 }
 
 .modal{
@@ -405,7 +456,7 @@ a:hover, .selectedMenu{
 	@include borderR(5px);
 	@include flexbox();
   	@include flex-position(center, center);
-	
+
 	h2{
 		color: red;
 	}
@@ -443,7 +494,7 @@ a:hover, .selectedMenu{
 		width: 100%;
 		background-position: center center;
 		background-repeat: no-repeat;
-		background-size: cover; 
+		background-size: cover;
 		/* img{
 			height: 100%;
 			width: auto;
@@ -470,11 +521,11 @@ a:hover, .selectedMenu{
 	    cursor: pointer;
 	    color: transparent;
 	    border: none;
-	    outline: none;	    
+	    outline: none;
 	    background-color: transparent;
 	    background-size: 30%;
 	}
-	
+
 	.slick-arrow:hover{
 		//@include opacity(.75);
 		//background-color: $MAIN_COLOR;
@@ -539,22 +590,22 @@ a:hover, .selectedMenu{
   text-decoration: inherit;
   text-align: center;
   /* opacity: .8; */
- 
+
   /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
   text-transform: none;
-  
+
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */
- 
+
   /* Font smoothing. That was taken from TWBS */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
- 
+
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
- 
+
 .icon-th-large:before { content: '\e800'; } /* '' */
 .icon-menu:before { content: '\e801'; } /* '' */
 /* END FONT ICONS */

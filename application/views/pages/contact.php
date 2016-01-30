@@ -6,8 +6,8 @@
 		<div class="mobile-logo"><a href="<?php echo site_url(''); ?>"></a></div>
 	</div>
 	<div class="container-half b-bottom contact-mobile">
-		<?php if($errorPost){ 
-			echo "<div id='modal-bg' class='modal-bg' onclick='closeModal()'></div><div id='modal' class='modal'><div class='btn-close' onclick='closeModal()'>X</div><ul><li><h2>Attenzione</h2></li>".validation_errors()."</ul></div>"; 
+		<?php if($errorPost){
+			echo "<div id='modal-bg' class='modal-bg' onclick='closeModal()'></div><div id='modal' class='modal'><div class='btn-close' onclick='closeModal()'>X</div><ul><li><h2>Attenzione</h2></li>".validation_errors()."</ul></div>";
 		}?>
 		<div class="form-sidebar">
 			<?php echo $text; ?>
@@ -41,15 +41,13 @@
 				Via G. Puccini 22<br>
 				25050 Pian Camuno - Brescia<br>
 				C.F. 01992370179<br>
-				P.IVA 01944760980<br>
-				Tel <a href="tel:0364591429">0364 591429</a> - <a href="tel:0364590858">0364 590858</a><br>
-				Fax. 0364 591429 - 0364 590858<br>
+				P.IVA 01944760980
 			</p>
 		</div>
 		<div id="map-wrap" class="map-wrap">
 			Caricamento mappa...
 		</div>
 	</div>
-	
+
 </div>
 

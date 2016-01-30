@@ -7,15 +7,14 @@
 		<!-- <img class="full-img" src="resources/images/bg_test.jpg"> -->
 	</div>
 	<div class="container-half">
-		<div class="vert-half img-list">
+		<!-- <div class="vert-half img-list"> -->
 			<?php echo $text; ?>
-		</div>
-		<div class="vert-half img-list">
+		<!-- </div> -->
+		<!-- <div class="vert-half img-list">
 			<img class="full-img" alt="" src="resources/images/1.jpg">
 		</div>
 
 		<div class="clear-divs"></div>
-		<!-- images lists -->
 		<div class="vert-half img-list">
 			<img class="full-img" alt="" src="resources/images/2.jpg">
 		</div>
@@ -27,6 +26,13 @@
 		</div>
 		<div class="vert-half img-list">
 			<img class="full-img" alt="" src="resources/images/5.jpg">
-		</div>
+		</div> -->
 	</div>
+	<div class="clear-divs"></div>
+	<div class="footer">
+    <p>
+      ROMEC snc di Romele e Giacomo e C. | Via G. Puccini,  22 - 25050 Pian Camuno (BS)<br>
+      Tel. 0364 591429 - 0364 590858 - Fax. 0364 591429 - 0364 590858 C.F. 01992370179 - P.IVA 01944760980
+    </p>
+  </div>
 </div>

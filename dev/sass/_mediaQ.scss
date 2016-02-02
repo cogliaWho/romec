@@ -186,8 +186,8 @@
   			min-height: 500px;
 		    height: auto;
 		    background-size: contain;
-		    .vert-half{
-		    	width: 100%;
+		    .vert-half, .vert-third{
+		    	width: 50%;
 		    	p{
 		    		font-size: 1.3rem;
 		    		line-height: 1.4rem;
@@ -275,6 +275,14 @@
   		.container-half {
   			min-height: 230px;
   			padding: 15px;
+  			.vert-half, .vert-third{
+		    	width: 100%;
+		    	p{
+		    		font-size: 1.3rem;
+		    		line-height: 1.4rem;
+		    		padding: 0px;
+		    	}
+		    }
   		}
 	}
 

@@ -6,27 +6,21 @@
 	<div class="container-half b-bottom costruzione-header">
 		<!-- <img class="full-img" src="resources/images/bg_test.jpg"> -->
 	</div>
-	<div class="container-half">
-		<!-- <div class="vert-half img-list"> -->
+	<div class="container-half height-auto">
 			<?php echo $text; ?>
-		<!-- </div> -->
-		<!-- <div class="vert-half img-list">
-			<img class="full-img" alt="" src="resources/images/1.jpg">
+		<div class="vert-third img-list">
+			<img class="full-img" alt="" src="resources/images/costruzione/1.jpg">
 		</div>
-
+		<div class="vert-third img-list">
+			<img class="full-img" alt="" src="resources/images/costruzione/2.jpg">
+		</div>
+		<div class="vert-third img-list">
+			<img class="full-img" alt="" src="resources/images/costruzione/3.jpg">
+		</div>
+		<div class="vert-third img-list">
+			<img class="full-img" alt="" src="resources/images/costruzione/4.jpg">
+		</div>
 		<div class="clear-divs"></div>
-		<div class="vert-half img-list">
-			<img class="full-img" alt="" src="resources/images/2.jpg">
-		</div>
-		<div class="vert-half img-list">
-			<img class="full-img" alt="" src="resources/images/3.jpg">
-		</div>
-		<div class="vert-half img-list">
-			<img class="full-img" alt="" src="resources/images/6.jpg">
-		</div>
-		<div class="vert-half img-list">
-			<img class="full-img" alt="" src="resources/images/5.jpg">
-		</div> -->
 	</div>
 	<div class="clear-divs"></div>
 	<div class="footer">

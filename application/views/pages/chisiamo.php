@@ -34,6 +34,7 @@
 				<img class="full-img" alt="" src="<?php echo site_url('resources/docs/thumb/certif_sicurezza.png'); ?>">
 			</a>
 		</div>
+		<div class="clear-divs mt30"></div>
 	</div>
 	<div class="clear-divs"></div>
 	<div class="footer">

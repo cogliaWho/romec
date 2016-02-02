@@ -23,6 +23,19 @@
 	</div>
 	<div class="container-half">
 		<?php echo $text; ?>
+		<div class="vert-third img-list">
+			<img class="full-img" alt="" src="resources/images/progettazione/1.jpg">
+		</div>
+		<div class="vert-third img-list">
+			<img class="full-img" alt="" src="resources/images/progettazione/2.jpg">
+		</div>
+		<div class="vert-third img-list">
+			<img class="full-img" alt="" src="resources/images/progettazione/3.jpg">
+		</div>
+		<div class="vert-third img-list">
+			<img class="full-img" alt="" src="resources/images/progettazione/4.jpg">
+		</div>
+		<div class="clear-divs"></div>
 	</div>
 	<div class="clear-divs"></div>
 	<div class="footer">

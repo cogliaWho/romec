@@ -133,10 +133,14 @@
 }
 }
 
-@media screen and (max-width: 1024px){
-  	.sidebar .menu-container ul li a p{
+@media screen and (max-width: 1135px){
+  .sidebar .menu-container ul li a p{
 		font-size: 1.3rem;
+		padding-left: 30px;
 	}
+}
+
+@media screen and (max-width: 1024px){
 
 	header{
 		display: none;
@@ -317,6 +321,7 @@
 
 	.content .container-half.contact-mobile{
 		padding: 15px;
+		height: auto;
 	}
 
 	.content .contact-mobile{
@@ -347,6 +352,15 @@
 		    line-height: 1.5rem;
 		}
 	}
+
+	.content .footer {
+    height: 80px;
+  }
+
+  .content .container-half.b-bottom{
+  	height: auto;
+  	background-position: center;
+  }
 }
 
 @media screen and (max-width: 480px){
